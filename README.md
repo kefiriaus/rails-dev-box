@@ -57,6 +57,10 @@ Port 3000 in the host computer is forwarded to port 3000 in the virtual machine.
 
 * An ExecJS runtime
 
+* Imagemagick
+
+* Curl
+
 ## Recommended Workflow
 
 The recommended workflow is
@@ -125,9 +129,10 @@ performant.
 
 Vagrant 1.5 implements a [sharing mechanism based on rsync](https://www.vagrantup.com/blog/feature-preview-vagrant-1-5-rsync.html)
 that dramatically improves read/write because files are actually stored in the
-guest. Just throw
+guest. Just throw one of these strings
 
-    config.vm.synced_folder '.', '/vagrant', type: 'rsync'
+    config.vm.synced_folder '/Users/username/RubymineProjects', '/vagrant', type: 'rsync' # Mac
+    config.vm.synced_folder 'C:\\Users\\username\\RubymineProjects', '/vagrant', type: 'rsync' # Windows
 
 to the _Vagrantfile_ and either rsync manually with
 
