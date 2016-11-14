@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 Vagrant.configure('2') do |config|
   config.vm.box      = 'ubuntu/trusty64' # 14.04
+  # config.vm.box      = 'ubuntu/yakkety64' # 16.10
   config.vm.hostname = 'rails-dev-box'
 
   # For Mac
